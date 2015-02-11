@@ -8,6 +8,24 @@
 </head>
 <body>
 
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <a href="#nav" class="nav-collapse" id="nav-collapse">Menu</a>
+            <ul class="nav navbar-nav">
+                <li><%= link_to "Home", root_path %></li>
+                <li><%= link_to "About", about_index_path %></li>
+                <li><%= link_to "Contact", contact_index_path %></li>
+                <%= render 'devise/menu/registration' %>
+                <%= render 'devise/menu/login' %>
+            </ul>
+        </div>
+    </div>
+</nav>
+
 <%= yield %>
 
 </body>
