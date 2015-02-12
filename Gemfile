@@ -43,6 +43,6 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'devise', '~> 3.4.1'
 gem 'rails-assets-bootstrap'
 gem 'rails-assets-backbone'
-gem 'rails-assets-backbone.marionette'
+gem 'marionette-rails'
 gem 'rails-assets-underscore'
 
