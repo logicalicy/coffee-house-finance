@@ -45,4 +45,4 @@ gem 'rails-assets-bootstrap'
 gem 'rails-assets-backbone'
 gem 'marionette-rails'
 gem 'rails-assets-underscore'
-
+gem 'ejs'

@@ -17,5 +17,8 @@
 //= require underscore
 //= require backbone
 //= require backbone.marionette
-//= require_tree .
-
+//= require ./main
+//= require_tree ./templates
+//= require_tree ./entities
+//= require_tree ./apps
+//= require ./main-config
