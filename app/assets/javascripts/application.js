@@ -13,8 +13,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require_tree .
-//= require backbone.marionette
-//= require underscore
 //= require bootstrap
+//= require underscore
+//= require backbone
+//= require backbone.marionette
+//= require_tree .
 
