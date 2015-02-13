@@ -39,9 +39,11 @@
             <%= link_to "Contact", root_path + "#contact" %>
           </li>
       </ul>
+      <div class="user-actions pull-right">
+        <%= render 'devise/menu/registration' %>
+        <%= render 'devise/menu/login' %>
+      </div>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-<%= render 'devise/menu/registration' %>
-<%= render 'devise/menu/login' %>
 <div id="content"></div>
