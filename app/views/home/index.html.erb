@@ -19,7 +19,13 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Coffee House Finance</a>
+      <% if user_signed_in? %>
+        <a class="navbar-brand" href="#portfolio">
+      <% else %>
+        <a class="navbar-brand" href="#">
+      <% end %>
+        Coffee House Finance
+      </a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
