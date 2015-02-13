@@ -29,5 +29,8 @@ App.addInitializer(function (options) {
 });
 
 $(document).ready(function () {
-    App.start();
+    var loggedIn = $.cookie('signed_in');
+    if (loggedIn) {
+        App.start();
+    }
 });
