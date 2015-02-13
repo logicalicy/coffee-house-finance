@@ -1,11 +1,6 @@
 Rails.application.routes.draw do
-  get 'portfolio/index'
 
   root to: "home#index"
-
-  get 'about/index'
-
-  get 'contact/index'
 
   get 'home/index'
 

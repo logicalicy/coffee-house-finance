@@ -1,2 +1,39 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Coffee House Finance</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+          <% if user_signed_in? %>
+          <li class="active">
+            <%= link_to "Portfolio", root_path + "#portfolio" %>
+          </li>
+          <% else %>
+          <li class="active"><%= link_to "Home", root_path + "#home" %></li>
+          <% end %>
+          <li>
+            <%= link_to "About", root_path + "#about" %>
+          </li>
+          <li>
+            <%= link_to "Contact", root_path + "#contact" %>
+          </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<%= render 'devise/menu/registration' %>
+<%= render 'devise/menu/login' %>
+<div id="content"></div>

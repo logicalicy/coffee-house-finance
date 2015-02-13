@@ -1,19 +1,31 @@
 App.on('start', function() {
-  return Backbone.history.start;
+    if ( Backbone.history ) {
+        Backbone.history.start();
+        var loggedIn = $.cookie('signed_in');
+        if (this.getCurrentRoute() === "" && loggedIn) {
+            App.Portfolio.Position.Controller.showPositions();
+        }
+        else {
+            App.Home.Controller.showHome();
+        }
+    }
 });
 
+App.getCurrentRoute = function () {
+    return Backbone.history.fragment
+};
+
 App.addInitializer(function (options) {
+
+    App.navigate = function(route, options){
+        options || (options = {});
+        Backbone.history.navigate(route, options);
+    };
+
     App.addRegions({
         mainRegion: "#content"
     });
 
-    var Position = App.module('Portfolio.Position');
-    var positions = App.request("position:entities");
-    var portfoliosView = new Position.PositionsView({
-        collection: positions
-    });
-
-    App.mainRegion.show(portfoliosView);
 });
 
 $(document).ready(function () {
