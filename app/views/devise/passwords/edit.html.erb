@@ -1,5 +1,13 @@
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+<% if notice %>
+<div class="alert alert-info notice" role="alert">
+  <p><%= notice %></p>
+</div>
+<% end %>
+<% if alert %>
+<div class="alert alert-info" role="alert">
+  <p><%= alert %></p>
+</div>
+<% end %>
 
 <h2>Change your password</h2>
 
