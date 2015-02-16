@@ -1,7 +1,7 @@
 App.module("Portfolio.Position", function (Position, App, Backbone, Marionette, $, _) {
     Position.Router = Marionette.AppRouter.extend({
         appRoutes: {
-            "portfolio": "showPositions"
+            "positions": "showPositions"
         }
     });
     var API = {

@@ -3,9 +3,9 @@ App.on('start', function() {
         Backbone.history.start();
         var loggedIn = $.cookie('signed_in');
         if (this.getCurrentRoute() === "" && loggedIn) {
-            App.Portfolio.Position.Controller.showPositions();
+            App.Portfolio.Controller.showPortfolios();
         }
-        else {
+        else if (! loggedIn) {
             App.Home.Controller.showHome();
         }
     }
