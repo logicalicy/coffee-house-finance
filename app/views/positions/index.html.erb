@@ -1,0 +1,39 @@
+<h1>Listing positions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Isin</th>
+      <th>Units</th>
+      <th>Currency</th>
+      <th>Purchase date</th>
+      <th>Purchase price</th>
+      <th>Current price</th>
+      <th>Asset class</th>
+      <th>Portfolio ID</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @positions.each do |position| %>
+      <tr>
+        <td><%= position.isin %></td>
+        <td><%= position.units %></td>
+        <td><%= position.currency %></td>
+        <td><%= position.purchase_date %></td>
+        <td><%= position.purchase_price %></td>
+        <td><%= position.current_price %></td>
+        <td><%= position.asset_class %></td>
+        <td><%= position.portfolio_id %></td>
+        <td><%= link_to 'Show', position %></td>
+        <td><%= link_to 'Edit', edit_position_path(position) %></td>
+        <td><%= link_to 'Destroy', position, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Position', new_portfolio_position_path %>

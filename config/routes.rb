@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  resources :portfolios, shallow: true do
+    resources :positions
+  end
+
   root to: "home#index"
 
   get 'home/index'

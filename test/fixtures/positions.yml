@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  isin: MyString
+  units: 1
+  currency: MyString
+  purchase_date: 2015-02-16
+  purchase_price: 9.99
+  current_price: 9.99
+  asset_class: MyString
+
+two:
+  isin: MyString
+  units: 1
+  currency: MyString
+  purchase_date: 2015-02-16
+  purchase_price: 9.99
+  current_price: 9.99
+  asset_class: MyString
