@@ -1,19 +1,23 @@
 require 'test_helper'
 
 class PortfoliosControllerTest < ActionController::TestCase
+
+  include Devise::TestHelpers
+  include Warden::Test::Helpers
+
   setup do
     @portfolio = portfolios(:one)
   end
 
   test "should get index" do
     get :index
-    assert_response :success
+    assert_response 302
     assert_not_nil assigns(:portfolios)
   end
 
   test "should get new" do
     get :new
-    assert_response :success
+    assert_response 302
   end
 
   test "should create portfolio" do
@@ -26,12 +30,12 @@ class PortfoliosControllerTest < ActionController::TestCase
 
   test "should show portfolio" do
     get :show, id: @portfolio
-    assert_response :success
+    assert_response 302
   end
 
   test "should get edit" do
     get :edit, id: @portfolio
-    assert_response :success
+    assert_response 302
   end
 
   test "should update portfolio" do

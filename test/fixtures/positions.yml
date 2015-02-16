@@ -1,19 +1,25 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  isin: MyString
+  id: 1
+  isin: GB1234567890
   units: 1
   currency: MyString
   purchase_date: 2015-02-16
   purchase_price: 9.99
   current_price: 9.99
   asset_class: MyString
+  user_id: 1
+  portfolio_id: 1
 
 two:
-  isin: MyString
+  id: 2
+  isin: US1234567890
   units: 1
   currency: MyString
   purchase_date: 2015-02-16
   purchase_price: 9.99
   current_price: 9.99
   asset_class: MyString
+  user_id: 2
+  portfolio_id: 2

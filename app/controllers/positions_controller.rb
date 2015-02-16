@@ -1,7 +1,7 @@
 class PositionsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_position, only: [:show, :edit, :update, :destroy]
   before_action :set_portfolio, only: [:index, :new, :create]
-  before_action :authenticate_user!
 
   respond_to :html, :json
 
