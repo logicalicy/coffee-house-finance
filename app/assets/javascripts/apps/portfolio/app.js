@@ -18,13 +18,8 @@ App.module("Portfolio", function (Portfolio, App, Backbone, Marionette, $, _) {
     ]);
   };
   var initializePortfolios = function () {
-    portfolios = new Portfolio.Collection([
-      {
-        id: 1,
-        name: 'America',
-        description: 'Example description'
-      }
-    ]);
+    portfolios = new Portfolio.Collection();
+    portfolios.fetch();
   };
   var API = {
     getPositionEntities: function() {

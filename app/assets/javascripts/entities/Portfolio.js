@@ -4,6 +4,7 @@ App.module("Portfolio", function (Portfolio, App, Backbone, Marionette, $, _) {
     // on model.
     Portfolio.Model = Backbone.Model.extend({});
     Portfolio.Collection = Backbone.Collection.extend({
-        model: Portfolio.Model
+        model: Portfolio.Model,
+        url: '/portfolios.json'
     });
 });
