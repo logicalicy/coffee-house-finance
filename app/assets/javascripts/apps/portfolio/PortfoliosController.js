@@ -14,11 +14,7 @@ App.module("Portfolio", function (Portfolio, App, Backbone, Marionette, $, _) {
     });
     Portfolio.Controller = {
         showPortfolios: function () {
-            var portfolios = App.request("portfolio:entities");
-            var portfoliosView = new Portfolio.PortfoliosView({
-                collection: portfolios
-            });
-
+            var portfoliosView = new Portfolio.PortfoliosLayoutView();
             App.mainRegion.show(portfoliosView);
         }
     };
