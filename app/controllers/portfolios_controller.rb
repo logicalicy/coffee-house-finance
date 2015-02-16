@@ -34,7 +34,7 @@ class PortfoliosController < ApplicationController
 
   def destroy
     @portfolio.destroy
-    redirect_to root_url
+    respond_with(@portfolio)
   end
 
   private
