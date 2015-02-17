@@ -1,38 +1,45 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Isin:</strong>
-  <%= @position.isin %>
-</p>
+<div class="container">
+    <div class="row">
+      <div class="col-md-4 col-md-offset-4">
+        <p>
+          <strong>Isin:</strong>
+          <%= @position.isin %>
+        </p>
 
-<p>
-  <strong>Units:</strong>
-  <%= @position.units %>
-</p>
+        <p>
+          <strong>Units:</strong>
+          <%= @position.units %>
+        </p>
 
-<p>
-  <strong>Currency:</strong>
-  <%= @position.currency %>
-</p>
+        <p>
+          <strong>Currency:</strong>
+          <%= @position.currency %>
+        </p>
 
-<p>
-  <strong>Purchase date:</strong>
-  <%= @position.purchase_date %>
-</p>
+        <p>
+          <strong>Purchase date:</strong>
+          <%= @position.purchase_date %>
+        </p>
 
-<p>
-  <strong>Purchase price:</strong>
-  <%= @position.purchase_price %>
-</p>
+        <p>
+          <strong>Purchase price:</strong>
+          <%= @position.purchase_price %>
+        </p>
 
-<p>
-  <strong>Current price:</strong>
-  <%= @position.current_price %>
-</p>
+        <p>
+          <strong>Current price:</strong>
+          <%= @position.current_price %>
+        </p>
 
-<p>
-  <strong>Asset class:</strong>
-  <%= @position.asset_class %>
-</p>
+        <p>
+          <strong>Asset class:</strong>
+          <%= @position.asset_class %>
+        </p>
 
-<%= link_to 'Edit', edit_position_path(@position) %>
+        <%= link_to 'Edit', edit_position_path(@position) %>
+
+    </div>
+  </div>
+</div>
