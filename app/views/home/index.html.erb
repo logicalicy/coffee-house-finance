@@ -49,6 +49,18 @@
             <%= link_to "Contact", root_path + "#contact" %>
           </li>
       </ul>
+      <script type="text/javascript">
+        $('li').click(function(event) {
+            var $li = $(event.currentTarget);
+            $('li').removeClass('active');
+            $li.addClass('active');
+        });
+        $('.navbar-brand').click(function(event) {
+            var $el = $(event.currentTarget);
+            $('li').removeClass('active');
+            $('li').first().addClass('active');
+        });
+      </script>
       <div class="user-actions pull-right">
         <%= render 'devise/menu/registration' %>
         <%= render 'devise/menu/login' %>
