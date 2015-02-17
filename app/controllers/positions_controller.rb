@@ -11,7 +11,7 @@ class PositionsController < ApplicationController
   end
 
   def show
-    respond_with(@position)
+    redirect_to root_url
   end
 
   def new

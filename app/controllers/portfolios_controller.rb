@@ -10,7 +10,7 @@ class PortfoliosController < ApplicationController
   end
 
   def show
-    respond_with(@portfolio)
+    redirect_to root_url
   end
 
   def new
