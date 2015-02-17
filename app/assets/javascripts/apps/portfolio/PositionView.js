@@ -4,6 +4,17 @@ App.module("Portfolio.Position", function (Position, App, Backbone, Marionette, 
     Position.PositionView = Backbone.Marionette.ItemView.extend({
         template: positionTpl,
         tagName: 'tr',
-        className: 'portfolio'
+        className: 'position',
+        events: {
+            'click .edit-position': 'onClickEditPosition',
+            'click .delete-position': 'onClickDeletePosition'
+        },
+        onClickEditPosition: function (event) {
+            var url = this.model.get('url').replace('.json','/edit');
+            window.location.href = url;
+        },
+        onClickDeletePosition: function (event) {
+            this.model.destroy();
+        }
     });
 });

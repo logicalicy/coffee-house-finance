@@ -15,10 +15,8 @@ App.module("Portfolio.Position", function (Position, App, Backbone, Marionette, 
     Position.Controller = {
         showPositions: function (portfolioId) {
             var Position = App.module('Portfolio.Position');
-            var positions = App.request("position:entities", portfolioId);
-            var portfoliosView = new Position.PositionsView({
-                collection: positions
-            });
+            var portfoliosView = new Position.PositionsLayoutView();
+            portfoliosView.portfolioId = portfolioId;
             App.mainRegion.show(portfoliosView);
         }
     };
