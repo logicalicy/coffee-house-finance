@@ -1,32 +1,25 @@
 App.module("Portfolio", function (Portfolio, App, Backbone, Marionette, $, _) {
   var Position = App.module('Portfolio.Position');
   var portfolios, positions;
-  var initializePositions = function () {
-    positions = new Position.Collection([], {
-      portfolio_id: 1
-    });
-    positions.fetch();
-  };
-  var initializePortfolios = function () {
-    portfolios = new Portfolio.Collection();
-    portfolios.fetch();
-  };
   var API = {
-    getPositionEntities: function() {
+    getPositionEntities: function(portfolioId) {
       if( ! positions ) {
-        initializePositions();
+        positions = new Position.Collection();
       }
+      positions.portfolio_id = portfolioId;
+      positions.fetch();
       return positions;
     },
     getPortfolioEntities: function() {
       if( ! portfolios ) {
-        initializePortfolios();
+        portfolios = new Portfolio.Collection();
+        portfolios.fetch();
       }
       return portfolios;
     }
   };
-  App.reqres.setHandler("position:entities", function() {
-    return API.getPositionEntities();
+  App.reqres.setHandler("position:entities", function(portfolioId) {
+    return API.getPositionEntities(portfolioId);
   });
   App.reqres.setHandler("portfolio:entities", function() {
     return API.getPortfolioEntities();
