@@ -2,20 +2,10 @@ App.module("Portfolio", function (Portfolio, App, Backbone, Marionette, $, _) {
   var Position = App.module('Portfolio.Position');
   var portfolios, positions;
   var initializePositions = function () {
-    positions = new Position.Collection([
-      {
-        name: 'America',
-        value: 1222.00
-      },
-      {
-        name: 'Europe',
-        value: 30000.00
-      },
-      {
-        name: 'UK',
-        value: 4000.00
-      }
-    ]);
+    positions = new Position.Collection([], {
+      portfolio_id: 1
+    });
+    positions.fetch();
   };
   var initializePortfolios = function () {
     portfolios = new Portfolio.Collection();

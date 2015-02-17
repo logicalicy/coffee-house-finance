@@ -1,19 +1,19 @@
 App.module("Portfolio.Position", function (Position, App, Backbone, Marionette, $, _) {
     Position.Router = Marionette.AppRouter.extend({
         appRoutes: {
-            "positions": "showPositions"
+            "portfolios/:id/positions": "showPositions"
         }
     });
     var API = {
-        showPositions: function() {
-            Position.Controller.showPositions();
+        showPositions: function(portfolioId) {
+            Position.Controller.showPositions(portfolioId);
         }
     };
     new Position.Router({
         controller: API
     });
     Position.Controller = {
-        showPositions: function () {
+        showPositions: function (portfolioId) {
             var Position = App.module('Portfolio.Position');
             var positions = App.request("position:entities");
             var portfoliosView = new Position.PositionsView({
