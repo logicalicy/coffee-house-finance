@@ -8,15 +8,27 @@
     }
 }
 
+@mixin styleless-anchor {
+    a {
+      color: #000;
+      text-decoration: none;
+      &:visited {
+        color: #666;
+      }
+    }
+}
+
 #add-portfolio,
 #back-to-portfolios,
 #add-position {
     margin-bottom: 10px;
     @include fa;
+    @include styleless-anchor;
 }
 
 .view-portfolio,
 .edit-portfolio,
 .delete-portfolio {
     @include fa;
+    @include styleless-anchor;
 }
