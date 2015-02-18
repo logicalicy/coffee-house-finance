@@ -41,6 +41,8 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem 'rails_12factor'
+
 gem 'devise', '~> 3.4.1'
 gem 'rails-assets-bootstrap'
 gem 'rails-assets-backbone'
