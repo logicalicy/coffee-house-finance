@@ -1,9 +1,16 @@
 <% if user_signed_in? %>
-  <button class="btn btn-default">
-  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
-  </button>
+    <button id="logout" class="btn btn-default">Logout</button>
+    <script type="text/javascript">
+        $('#logout').click(function () {
+            $.ajax({
+                url: '<%= destroy_user_session_path %>',
+                type: 'DELETE',
+                success: function () {
+                    location.href = '/';
+                }
+            });
+        });
+    </script>
 <% else %>
-  <button class="btn btn-default">
-  <%= link_to('Login', new_user_session_path)  %>
-  </button>
+  <button class="btn btn-default" onclick="location.href = '<%= new_user_session_path %>';">Login</button>
 <% end %>

@@ -1,9 +1,5 @@
 <% if user_signed_in? %>
-  <button class="btn btn-default">
-  <%= link_to('Edit registration', edit_user_registration_path) %>
-  </button>
+  <button class="btn btn-default" onclick="location.href = '<%= edit_user_registration_path %>';">Edit registration</button>
 <% else %>
-  <button class="btn btn-default">
-  <%= link_to('Register', new_user_registration_path)  %>
-  </button>
+  <button class="btn btn-default" onclick="location.href = '<%= new_user_registration_path %>';">Register</button>
 <% end %>
