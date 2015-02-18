@@ -13,15 +13,15 @@
 
   <div class="field form-group">
     <%= f.label :isin, :class => "control-label" %>
-    <%= f.text_field :isin, :class => "form-control" %>
+    <%= f.text_field :isin, :class => "form-control", :placeholder => "Example: US9843321061" %>
   </div>
   <div class="field form-group">
     <%= f.label :units, :class => "control-label" %>
-    <%= f.number_field :units, :class => "form-control" %>
+    <%= f.number_field :units, :class => "form-control", :placeholder => "Example: 10" %>
   </div>
   <div class="field form-group">
     <%= f.label :currency, :class => "control-label" %>
-    <%= f.text_field :currency, :class => "form-control" %>
+    <%= f.text_field :currency, :class => "form-control", :placeholder => "Example: GBP" %>
   </div>
   <div class="field form-group">
     <%= f.label :purchase_date, :class => "control-label" %>
@@ -29,15 +29,25 @@
   </div>
   <div class="field form-group">
     <%= f.label :purchase_price, :class => "control-label" %>
-    <%= f.text_field :purchase_price, :class => "form-control" %>
+    <%= f.text_field :purchase_price, :class => "form-control", :placeholder => "Example: 100" %>
   </div>
   <div class="field form-group">
     <%= f.label :current_price, :class => "control-label" %>
-    <%= f.text_field :current_price, :class => "form-control" %>
+    <%= f.text_field :current_price, :class => "form-control", :placeholder => "Example: 100" %>
   </div>
   <div class="field form-group">
     <%= f.label :asset_class, :class => "control-label" %>
-    <%= f.text_field :asset_class, :class => "form-control" %>
+    <%= f.text_field :asset_class, :class => "form-control", :placeholder => "Example: Stocks" %>
+  </div>
+
+  <div class="field form-group">
+    <%= f.label :ticker_symbol, :class => "control-label" %>
+    <i>(Add a Yahoo ticker symbol to auto-update the current price - search yours <a href="https://uk.finance.yahoo.com/" target="_blank">here</a>)</i>
+    <%= f.text_field :ticker_symbol, :class => "form-control", :placeholder => "Example: YHOO" %>
+  </div>
+  <div class="field form-group">
+    <%= f.label :description, :class => "control-label" %>
+    <%= f.text_field :description, :class => "form-control" %>
   </div>
 
   <div class="actions">

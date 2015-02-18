@@ -27,7 +27,11 @@ App.module("Portfolio", function (Portfolio, App, Backbone, Marionette, $, _) {
             var totalValue = positions.reduce(function (memo, position) {
                     return memo + position.get('units') * position.get('current_price');
                 }, 0);
+            var totalPurchaseValue = positions.reduce(function (memo, position) {
+                    return memo + position.get('units') * position.get('purchase_price');
+                }, 0);
             this.$('.total-value').text(totalValue);
+            this.$('.total-profits').text( (totalValue - totalPurchaseValue).toFixed(2) );
         }
     });
 });
