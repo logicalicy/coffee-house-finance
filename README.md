@@ -1,18 +1,31 @@
-# Timeline Resume
+# Coffee House Finance
 
-TODO: Write a summary.
+Track your portfolios and their performance all in one place.
 
 ## Screenshot
 
-TODO: Insert screenshot.
+![alt tag](https://raw.githubusercontent.com/logicalicy/coffee-house-finance/master/Screenshot.png)
 
 ## Installation
 
-TODO: Write about installation.
+You'll need:
+- [Ruby on Rails](http://guides.rubyonrails.org/getting_started.html)
+- [git](http://git-scm.com/)
 
-## Usage
+_Note: Full deployment instructions are not in the scope of this README._
 
-TODO: Write about contributing.
+1. Clone the repository:
+
+        # git clone git@github.com:logicalicy/coffee-house-finance.git
+
+2. Install dependencies and start your server:
+
+        # cd coffee-house-finance
+        # bundle install
+        # rake assets:precompile
+        # rails server
+
+4. Access the app at `http://localhost:3000`
 
 ## Contributing
 
