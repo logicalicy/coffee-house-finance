@@ -6,6 +6,10 @@ Track your portfolios and their performance all in one place.
 
 ![alt tag](https://raw.githubusercontent.com/logicalicy/coffee-house-finance/master/Screenshot.png)
 
+## Help
+
+To start using Coffee House Finance, read the [Getting started](https://github.com/logicalicy/coffee-house-finance/wiki/Getting-started) wiki.
+
 ## Installation
 
 You'll need:
